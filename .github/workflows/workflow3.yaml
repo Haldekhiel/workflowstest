@@ -23,4 +23,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: print passed value
-      run: echo "job2 catch the value > ${needs.job1.outputs.username}"
+      run: echo "job2 catch the value > $USERNAME"
