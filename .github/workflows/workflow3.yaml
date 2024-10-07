@@ -10,7 +10,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
-      username: halah
+      username: "halah"
     steps:
     - uses: actions/checkout@v2
     - name: pass value
