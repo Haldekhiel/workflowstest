@@ -13,7 +13,7 @@ jobs:
       username: halah
     steps:
     - uses: actions/checkout@v2
-    - name: print job name
+    - name: pass value
       run: echo "job1 pass value"
   
   job2:
@@ -22,5 +22,5 @@ jobs:
       - job1
     steps:
     - uses: actions/checkout@v2
-    - name: print job name
-      run: echo "job2 catch the value > $username"
+    - name: print passed value
+      run: echo "job2 catch the value > ${needs.job1.outputs.username}"
