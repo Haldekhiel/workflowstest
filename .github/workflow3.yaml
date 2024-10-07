@@ -1,0 +1,28 @@
+name: workflow3
+
+on:
+  push:
+    branches:
+      - main
+      
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    outputs:
+      username: halah
+    steps:
+    - uses: actions/checkout@v2
+    - name: print job name
+      run: echo "job1 pass value"
+  
+    job2:
+    name: job2
+    runs-on: ubuntu-latest
+    nedds: 
+      - job1
+    steps:
+    - uses: actions/checkout@v2
+    - name: print job name
+      run: echo "job2 catch the value > $username"

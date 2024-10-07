@@ -1,0 +1,23 @@
+name: workflow2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job1:
+    name: job1
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: print job name
+      run: echo "Job name: $GITHUB_JOB"
+  
+    job2:
+    name: job2
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: print job name
+      run: echo "Job name: $GITHUB_JOB"

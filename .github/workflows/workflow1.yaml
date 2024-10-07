@@ -1,0 +1,18 @@
+name: workflow1
+
+env:
+  BRANCH_NAME: ${{ github.event.push.branch }} 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: print branch name
+      run: echo $BRANCH_NAME
+
