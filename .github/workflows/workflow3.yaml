@@ -10,11 +10,14 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     outputs:
-      username: "halah"
+      username: ${{ steps.print-job-name.outputs.username }}
+    steps:
     steps:
     - uses: actions/checkout@v2
     - name: pass value
-      run: echo "job1 pass value"
+      run: |
+      echo "job1 pass value"
+      echo "::set-output name=username::halah"
   
   job2:
     runs-on: ubuntu-latest
