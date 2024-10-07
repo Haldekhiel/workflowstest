@@ -18,7 +18,7 @@ jobs:
   
   job2:
     runs-on: ubuntu-latest
-    nedds: 
+    needs: 
       - job1
     steps:
     - uses: actions/checkout@v2
