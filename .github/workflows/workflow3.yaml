@@ -14,8 +14,8 @@ jobs:
     steps:
     - id: step1
       run: |
-      echo "job1 pass value"
-      echo "test=halah" >> "$GITHUB_OUTPUT"
+        echo "job1 pass value"
+        echo "test=halah" >> "$GITHUB_OUTPUT"
   
   job2:
     runs-on: ubuntu-latest
