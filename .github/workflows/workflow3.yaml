@@ -10,7 +10,7 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     outputs:
-      - username: ${{ steps.step1.outputs.username }}
+      - username: ${{ steps.step1.username }}
     steps:
     - name: passvalue
       id: step1
