@@ -16,7 +16,7 @@ jobs:
       id: step1
       run: |
         echo "job1 pass value"
-        echo "::set-output name=outputs.username:: halah"
+        echo "halah" >>> $GITHUB_OUTPUT
   
   job2:
     runs-on: ubuntu-latest
