@@ -10,13 +10,13 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     outputs:
-      username: ${{ steps.step1.outputs.test }}
+      username: ${{ steps.step1.outputs.username }}
     steps:
     - name: passvalue
       id: step1
       run: |
         echo "job1 pass value"
-        echo "::set-output name=outputs.test::halah"
+        echo "::set-output name=outputs.username::halah"
   
   job2:
     runs-on: ubuntu-latest
@@ -24,6 +24,6 @@ jobs:
       - job1
     steps:
     - name: print passed value
-      run: echo "job2 catch the value > ${{ needs.job1.outputs.test }}"
+      run: echo "job2 catch the value > ${{ needs.job1.outputs.username }}"
 
 
