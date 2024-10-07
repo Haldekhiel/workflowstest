@@ -22,4 +22,3 @@ jobs:
     - name: print job name
       run: echo "Job name: $GITHUB_JOB"
 
-//You have an error in your yaml syntax on line 15

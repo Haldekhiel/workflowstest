@@ -15,5 +15,3 @@ jobs:
     - uses: actions/checkout@v2
     - name: print branch name
       run: echo $BRANCH_NAME
-
-//didnt find branch name
