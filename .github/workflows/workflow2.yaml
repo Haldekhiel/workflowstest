@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: print job name
-      run: echo "Job name: $GITHUB_JOB"
+      run: echo "Job name $GITHUB_JOB"
   
     job2:
     name: job2
@@ -21,3 +21,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: print job name
       run: echo "Job name: $GITHUB_JOB"
+
+//You have an error in your yaml syntax on line 15
