@@ -12,7 +12,6 @@ jobs:
       output1: ${{ steps.step1.outputs.test }}
     steps:
     steps:
-    - uses: actions/checkout@v2
     - id: step1
       run: |
       echo "job1 pass value"
