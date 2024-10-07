@@ -16,7 +16,7 @@ jobs:
     - name: print job name
       run: echo "job1 pass value"
   
-    job2:
+  job2:
     runs-on: ubuntu-latest
     nedds: 
       - job1
