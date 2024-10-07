@@ -10,13 +10,13 @@ jobs:
     name: job1
     runs-on: ubuntu-latest
     outputs:
-      - username: ${{ steps.step1.username }}
+      - username: ${{ steps.step1.outputs.username }}
     steps:
     - name: passvalue
       id: step1
       run: |
         echo "job1 pass value"
-        echo "::set-output name=username:: halah"
+        echo "::set-output name=outputs.username:: halahfhfbfjk"
   
   job2:
     runs-on: ubuntu-latest
